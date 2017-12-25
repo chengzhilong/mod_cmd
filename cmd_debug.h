@@ -7,7 +7,8 @@
 #define PRINT(format, args...)			printk(format "\n", ## args)
 #define PRINTN(format, args...)			printk(format, ## args)
 
-#define PRINT_WARNING(format, args...)	PRINT("%s: *** ERROR ***: " format, __FUNCTION__, __LINE__, ## args)
+#define PRINT_INFO(format, args...)		PRINT("%s: *** INFO ***: " format, ## args)
+#define PRINT_WARNING(format, args...)	PRINT("%s: *** WARNING ***: " format, __FUNCTION__, __LINE__, ## args)
 #define PRINT_ERROR(format, args...)	PRINT("%s: *** ERROR ***: " format, __FUNCTION__, __LINE__, ## args)
 		
 #endif
